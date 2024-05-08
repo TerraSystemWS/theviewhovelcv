@@ -65,29 +65,29 @@ export default function RootLayout({
       </div>
       {/* <!-- Scroll Btn End --> */}
       {/* <!-- Main JS --> */}
-      <script src="assets/js/jquery-3.6.0.min.js" async></script>
+      <script src="assets/js/jquery-3.6.0.min.js" defer></script>
       {/* <!-- Bootstrap JS --> */}
-      <script src="assets/js/bootstrap.min.js" async></script>
+      <script src="assets/js/bootstrap.min.js" defer></script>
       {/* <!-- Counter Up JS --> */}
-      <script src="assets/js/jquery.counterup.min.js" async></script>
+      <script src="assets/js/jquery.counterup.min.js" defer></script>
       {/* <!-- Popper JS --> */}
-      <script src="assets/js/popper.min.js" async></script>
+      <script src="assets/js/popper.min.js" defer></script>
       {/* <!-- Magnific Popup JS --> */}
-      <script src="assets/js/jquery.magnific-popup.min.js" async></script>
+      <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
       {/* <!-- Nice Select JS --> */}
-      <script src="assets/js/jquery.nice-select.min.js" async></script>
+      <script src="assets/js/jquery.nice-select.min.js" defer></script>
       {/* <!-- Swiper Bundle JS --> */}
-      <script src="assets/js/swiper-bundle.min.js" async></script>
+      <script src="assets/js/swiper-bundle.min.js" defer></script>
       {/* <!-- Waypoints JS --> */}
-      <script src="assets/js/jquery.waypoints.min.js" async></script>
+      <script src="assets/js/jquery.waypoints.min.js" defer></script>
       {/* <!-- Mean Menu JS --> */}
-      <script src="assets/js/jquery.meanmenu.min.js" async></script>
+      <script src="assets/js/jquery.meanmenu.min.js" defer></script>
       {/* <!-- Isotope JS --> */}
-      <script src="assets/js/isotope.pkgd.min.js" async></script>
+      <script src="assets/js/isotope.pkgd.min.js" defer></script>
       {/* <!-- Countdown JS --> */}
       {/* <script src="assets/js/countdown.js"></script> */}
       {/* <!-- Custom JS --> */}
-      <script src="assets/js/custom.js" async></script>
+      <script src="assets/js/custom.js" defer></script>
     </body>
     
     </html>
