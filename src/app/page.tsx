@@ -4,13 +4,14 @@ export default function Home() {
   return (
     <>
       {/* <!-- Banner Area Start -->	 */}
-      <div className="banner__area" data-background="assets/img/banner-1.jpg">
+      <div className="banner__area" data-background="assets/fotos/banner-1.jpg">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
               <div className="banner__area-title">
                 <h1>
-                  The Best Hotel<span>Deals in the World</span>
+                  The Best Hotel
+                  <span>Deals in Fogo</span>
                 </h1>
                 <div className="banner__area-title-video">
                   <div className="video__play">
@@ -44,11 +45,10 @@ export default function Home() {
                   <div className="check__area-item-room">
                     <p>Room</p>
                     <select name="select">
-                      <option value="1">1 Room</option>
-                      <option value="2">2 Room</option>
-                      <option value="3">3 Room</option>
-                      <option value="4">4 Room</option>
-                      <option value="5">5 Room</option>
+                      <option value="1">Suite Master </option>
+                      <option value="2">Suite Térrea </option>
+                      <option value="3">Double Room </option>
+                      <option value="4">Single Room</option>
                     </select>
                   </div>
                 </div>
@@ -77,7 +77,8 @@ export default function Home() {
                   experience and to make new friends along the way.
                 </p>
                 <a className="theme-btn" href="about.html">
-                  Read More<i className="fal fa-long-arrow-right"></i>
+                  Read More
+                  <i className="fal fa-long-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -111,10 +112,10 @@ export default function Home() {
                   <li className="active" data-filter="*">
                     All Rooms
                   </li>
-                  <li data-filter=".luxury">Luxury</li>
+                  <li data-filter=".luxury">Suite</li>
                   <li data-filter=".single">Single</li>
-                  <li data-filter=".suite">Small Suite</li>
-                  <li data-filter=".family">Family</li>
+                  <li data-filter=".suite">Double</li>
+                  {/* <li data-filter=".family">Family</li> */}
                 </ul>
               </div>
             </div>
@@ -139,7 +140,8 @@ export default function Home() {
                     <a href="room-details.html">Small Suite</a>
                   </h4>
                   <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>Booking Now
+                    <i className="far fa-chevron-right"></i>
+                    Booking Now
                   </a>
                 </div>
               </div>
@@ -163,7 +165,8 @@ export default function Home() {
                     <a href="room-details.html">Deluxe Room</a>
                   </h4>
                   <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>Booking Now
+                    <i className="far fa-chevron-right"></i>
+                    Booking Now
                   </a>
                 </div>
               </div>
@@ -187,7 +190,8 @@ export default function Home() {
                     <a href="room-details.html">Family Room</a>
                   </h4>
                   <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>Booking Now
+                    <i className="far fa-chevron-right"></i>
+                    Booking Now
                   </a>
                 </div>
               </div>
@@ -211,7 +215,8 @@ export default function Home() {
                     <a href="room-details.html">Single Room</a>
                   </h4>
                   <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>Booking Now
+                    <i className="far fa-chevron-right"></i>
+                    Booking Now
                   </a>
                 </div>
               </div>
@@ -235,7 +240,8 @@ export default function Home() {
                     <a href="room-details.html">Luxury Room</a>
                   </h4>
                   <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>Booking Now
+                    <i className="far fa-chevron-right"></i>
+                    Booking Now
                   </a>
                 </div>
               </div>
@@ -348,7 +354,8 @@ export default function Home() {
                     scelerisque tortor. Mauris sit amet lectus porta,
                   </p>
                   <a className="theme-border-btn" href="services-details.html">
-                    Read More<i className="fal fa-long-arrow-right"></i>
+                    Read More
+                    <i className="fal fa-long-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -365,7 +372,8 @@ export default function Home() {
                     scelerisque tortor. Mauris sit amet lectus porta,
                   </p>
                   <a className="theme-border-btn" href="services-details.html">
-                    Read More<i className="fal fa-long-arrow-right"></i>
+                    Read More
+                    <i className="fal fa-long-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -400,7 +408,8 @@ export default function Home() {
                     scelerisque tortor. Mauris sit amet lectus porta,
                   </p>
                   <a className="theme-border-btn" href="services-details.html">
-                    Read More<i className="fal fa-long-arrow-right"></i>
+                    Read More
+                    <i className="fal fa-long-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -417,7 +426,8 @@ export default function Home() {
                     scelerisque tortor. Mauris sit amet lectus porta,
                   </p>
                   <a className="theme-border-btn" href="services-details.html">
-                    Read More<i className="fal fa-long-arrow-right"></i>
+                    Read More
+                    <i className="fal fa-long-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -559,7 +569,8 @@ export default function Home() {
                   </div>
                   <div className="blog__area-item-content-btn">
                     <a className="simple-btn-2" href="blog-details.html">
-                      Read More<i className="fal fa-long-arrow-right"></i>
+                      Read More
+                      <i className="fal fa-long-arrow-right"></i>
                     </a>
                   </div>
                 </div>
@@ -588,7 +599,8 @@ export default function Home() {
                   </div>
                   <div className="blog__area-item-content-btn">
                     <a className="simple-btn-2" href="blog-details.html">
-                      Read More<i className="fal fa-long-arrow-right"></i>
+                      Read More
+                      <i className="fal fa-long-arrow-right"></i>
                     </a>
                   </div>
                 </div>
@@ -617,7 +629,8 @@ export default function Home() {
                   </div>
                   <div className="blog__area-item-content-btn">
                     <a className="simple-btn-2" href="blog-details.html">
-                      Read More<i className="fal fa-long-arrow-right"></i>
+                      Read More
+                      <i className="fal fa-long-arrow-right"></i>
                     </a>
                   </div>
                 </div>
@@ -628,5 +641,5 @@ export default function Home() {
       </div>
       {/* <!-- Blog Area End -->	 */}
     </>
-  );
+  )
 }
