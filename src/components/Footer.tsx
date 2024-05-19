@@ -55,7 +55,10 @@ export default function Footer() {
                     </div>
                     <div className="footer__area-widget-contact-item-content">
                       <span>
-                        <a href="#">
+                        <a
+                          href="https://maps.app.goo.gl/nUaTPjursXBXHYoz5"
+                          target="_blank"
+                        >
                           Alto Vale dos cavaleiros, Sao Filipe, Fogo
                         </a>
                       </span>
@@ -67,7 +70,7 @@ export default function Footer() {
                     </div>
                     <div className="footer__area-widget-contact-item-content">
                       <span>
-                        <a href="mailto:help.info@gamil.com">
+                        <a href="mailto:reservas@theviewhotelcv.com">
                           reservas@theviewhotelcv.com
                         </a>
                       </span>
@@ -79,7 +82,7 @@ export default function Footer() {
                     </div>
                     <div className="footer__area-widget-contact-item-content">
                       <span>
-                        <a href="tel:+123(458)585568">+238 989 61 69</a>
+                        <a href="tel:002389896169">+238 989 61 69</a>
                       </span>
                     </div>
                   </div>
@@ -99,7 +102,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a href="services-details.html">
-                        <i className="fal fa-angle-double-right"></i>Car Parking
+                        <i className="fal fa-angle-double-right"></i>Restaurant
                       </a>
                     </li>
                     <li>
@@ -110,7 +113,8 @@ export default function Footer() {
                     </li>
                     <li>
                       <a href="services-details.html">
-                        <i className="fal fa-angle-double-right"></i>Fitness Gym
+                        <i className="fal fa-angle-double-right"></i>Gamming
+                        Room
                       </a>
                     </li>
                   </ul>
