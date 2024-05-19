@@ -1,5 +1,7 @@
 // 'use client'
 import Banner from '@/components/home/Banner'
+import Accommodations from '@/components/home/Accommodations'
+import accommodationsData from '@/data/accommodationsData'
 // Data object
 const bannerData = {
   title: 'The Best Hotel',
@@ -20,37 +22,7 @@ export default function Home() {
       />
       {/* <!-- Banner Area End --> */}
       {/* <!-- Accommodations Area Start --> */}
-      <div className="accommodations__area section-padding">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-5 col-lg-6 lg-mb-30">
-              <div className="accommodations__area-title">
-                <span className="subtitle__one">Accommodations</span>
-                <h2>Welcome Our Hotels And Resorts</h2>
-                <p>
-                  Savvy travelers are looking for more than just the next
-                  destination on the map. They are looking for a memorable
-                  experience and to make new friends along the way.
-                </p>
-                <a className="theme-btn" href="about.html">
-                  Read More
-                  <i className="fal fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div className="col-xl-7 col-lg-6">
-              <div className="accommodations__area-right">
-                <div className="accommodations__area-right-image">
-                  <img src="assets/img/hotel/hotel-1.jpg" alt="" />
-                  <div className="accommodations__area-right-image-two">
-                    <img src="assets/img/hotel/hotel-2.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Accommodations {...accommodationsData} />
       {/* <!-- Accommodations Area End --> */}
       {/* <!-- Deluxe Area Start --> */}
       <div className="deluxe__area section-padding">
