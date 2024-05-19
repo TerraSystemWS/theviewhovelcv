@@ -2,6 +2,9 @@
 import Banner from '@/components/home/Banner'
 import Accommodations from '@/components/home/Accommodations'
 import accommodationsData from '@/data/accommodationsData'
+import DeluxeArea from '@/components/home/DeluxeArea'
+import deluxeData from '@/data/deluxeData' // importacao de dados
+
 // Data object
 const bannerData = {
   title: 'The Best Hotel',
@@ -25,158 +28,9 @@ export default function Home() {
       <Accommodations {...accommodationsData} />
       {/* <!-- Accommodations Area End --> */}
       {/* <!-- Deluxe Area Start --> */}
-      <div className="deluxe__area section-padding">
-        <div className="container">
-          <div className="row align-items-end mb-60">
-            <div className="col-xl-5">
-              <div className="deluxe__area-title">
-                <span className="subtitle__one">Deluxe and Luxury</span>
-                <h2>Our Luxury Rooms</h2>
-              </div>
-            </div>
-            <div className="col-xl-7">
-              <div className="deluxe__area-btn">
-                <ul>
-                  <li className="active" data-filter="*">
-                    All Rooms
-                  </li>
-                  <li data-filter=".luxury">Suite</li>
-                  <li data-filter=".single">Single</li>
-                  <li data-filter=".suite">Double</li>
-                  {/* <li data-filter=".family">Family</li> */}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="row deluxe__area-active">
-            <div className="col-xl-3 col-lg-4 mb-30 suite">
-              <div className="deluxe__area-item">
-                <div className="deluxe__area-item-image">
-                  <img
-                    className="img__full"
-                    src="assets/img/luxury/luxury-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="deluxe__area-item-content">
-                  <h6>
-                    <a href="#">
-                      <span>$134</span> / Night
-                    </a>
-                  </h6>
-                  <h4>
-                    <a href="room-details.html">Small Suite</a>
-                  </h4>
-                  <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>
-                    Booking Now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-8 mb-30 suite">
-              <div className="deluxe__area-item deluxe__area-item-hover">
-                <div className="deluxe__area-item-image">
-                  <img
-                    className="img__full"
-                    src="assets/img/luxury/luxury-2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="deluxe__area-item-content">
-                  <h6>
-                    <a href="#">
-                      <span>$199</span> / Night
-                    </a>
-                  </h6>
-                  <h4>
-                    <a href="room-details.html">Deluxe Room</a>
-                  </h4>
-                  <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>
-                    Booking Now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-4 mb-30 family">
-              <div className="deluxe__area-item">
-                <div className="deluxe__area-item-image">
-                  <img
-                    className="img__full"
-                    src="assets/img/luxury/luxury-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="deluxe__area-item-content">
-                  <h6>
-                    <a href="#">
-                      <span>$319</span> / Night
-                    </a>
-                  </h6>
-                  <h4>
-                    <a href="room-details.html">Family Room</a>
-                  </h4>
-                  <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>
-                    Booking Now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-8 lg-mb-30 single">
-              <div className="deluxe__area-item">
-                <div className="deluxe__area-item-image">
-                  <img
-                    className="img__full"
-                    src="assets/img/luxury/luxury-4.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="deluxe__area-item-content">
-                  <h6>
-                    <a href="#">
-                      <span>$169</span> / Night
-                    </a>
-                  </h6>
-                  <h4>
-                    <a href="room-details.html">Single Room</a>
-                  </h4>
-                  <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>
-                    Booking Now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 luxury">
-              <div className="deluxe__area-item">
-                <div className="deluxe__area-item-image">
-                  <img
-                    className="img__full"
-                    src="assets/img/luxury/luxury-5.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="deluxe__area-item-content">
-                  <h6>
-                    <a href="#">
-                      <span>$249</span> / Night
-                    </a>
-                  </h6>
-                  <h4>
-                    <a href="room-details.html">Luxury Room</a>
-                  </h4>
-                  <a className="simple-btn" href="contact.html">
-                    <i className="far fa-chevron-right"></i>
-                    Booking Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <DeluxeArea deluxeData={deluxeData} />
+
       {/* <!-- Deluxe Area End --> */}
       {/* <!-- Video Area Start --> */}
       <div className="video__area" data-background="assets/img/video.jpg">
