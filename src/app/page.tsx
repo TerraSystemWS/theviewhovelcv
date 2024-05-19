@@ -1,67 +1,23 @@
 // 'use client'
+import Banner from '@/components/home/Banner'
+// Data object
+const bannerData = {
+  title: 'The Best Hotel',
+  subtitle: 'Deals in Fogo',
+  imageLink: 'assets/fotos/banner-1.jpg',
+  videoLink: 'https://www.youtube.com/watch?v=JhVtUBct7ik',
+}
 
 export default function Home() {
   return (
     <>
       {/* <!-- Banner Area Start -->	 */}
-      <div className="banner__area" data-background="assets/fotos/banner-1.jpg">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="banner__area-title">
-                <h1>
-                  The Best Hotel
-                  <span>Deals in Fogo</span>
-                </h1>
-                <div className="banner__area-title-video">
-                  <div className="video__play">
-                    <a
-                      className="video-popup"
-                      href="https://www.youtube.com/watch?v=0WC-tD-njcA"
-                    >
-                      <i className="fas fa-play"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <form action="#">
-              <div className="check__area">
-                <div className="check__area-item">
-                  <p>
-                    Check In
-                    <input id="date" type="date" />
-                  </p>
-                </div>
-                <div className="check__area-item">
-                  <p>
-                    Check Out
-                    <input id="date2" type="date" />
-                  </p>
-                </div>
-                <div className="check__area-item">
-                  <div className="check__area-item-room">
-                    <p>Room</p>
-                    <select name="select">
-                      <option value="1">Suite Master </option>
-                      <option value="2">Suite Térrea </option>
-                      <option value="3">Double Room </option>
-                      <option value="4">Single Room</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="check__area-item button">
-                  <button className="theme-btn" type="submit">
-                    Check Now
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+      <Banner
+        title={bannerData.title}
+        subtitle={bannerData.subtitle}
+        imageLink={bannerData.imageLink}
+        videoLink={bannerData.videoLink}
+      />
       {/* <!-- Banner Area End --> */}
       {/* <!-- Accommodations Area Start --> */}
       <div className="accommodations__area section-padding">

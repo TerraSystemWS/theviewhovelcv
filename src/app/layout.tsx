@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 // import { Inter } from "next/font/google";
 // import "./globals.css";
+import { logoSrc, menuItems } from '@/data/headerData'
 
 // const inter = Inter({ subsets: ["latin"] });
 import Footer from '@/components/Footer'
@@ -57,14 +58,14 @@ export default function RootLayout({
 
       <body>
         {/* <!-- Preloader start --> */}
-        <div className="theme-loader">
+        {/* <div className="theme-loader">
           <div className="spinner">
             <div className="double-bounce1"></div>
             <div className="double-bounce2"></div>
           </div>
-        </div>
+        </div> */}
         {/* <!-- Preloader end --> */}
-        <Header />
+        <Header logoSrc={logoSrc} menuItems={menuItems} />
         {/* <!-- Header Area End -->	 */}
         {/* <!-- Start End --> */}
         {children}
