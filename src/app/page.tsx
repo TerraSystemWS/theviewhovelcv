@@ -8,6 +8,9 @@ import VideoArea from '@/components/home/VideoArea'
 import videoareaData from '@/data/videoareaData' //importacao de dados
 import FeatureArea from '@/components/home/FeatureArea'
 import features from '@/data/features' // import data
+import ServicesArea from '@/components/service/servicesArea'
+import { Service } from '@/data/serviceData' // Importing the Service interface
+import serviceData from '@/data/serviceData' // Importing the service data
 
 // Data object
 const bannerData = {
@@ -18,6 +21,9 @@ const bannerData = {
 }
 
 export default function Home() {
+  // You can fetch or define the service data here
+  const services: Service[] = serviceData
+
   return (
     <>
       {/* <!-- Banner Area Start -->	 */}
@@ -40,60 +46,7 @@ export default function Home() {
       <VideoArea {...videoareaData} />
       {/* <!-- Video Area End --> */}
       {/* <!-- Services Area Start --> */}
-      <div className="services__area section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 lg-mb-30">
-              <div className="services__area-item">
-                <div className="services__area-item-icon">
-                  <img src="assets/img/icon/cleaning.png" alt="" />
-                </div>
-                <div className="services__area-item-content">
-                  <h5>
-                    <a href="#">Room Cleaning</a>
-                  </h5>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 sm-mb-30">
-              <div className="services__area-item">
-                <div className="services__area-item-icon">
-                  <img src="assets/img/icon/wifi.png" alt="" />
-                </div>
-                <div className="services__area-item-content">
-                  <h5>
-                    <a href="#">Room Wifi</a>
-                  </h5>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="services__area-item">
-                <div className="services__area-item-icon">
-                  <img src="assets/img/icon/location.png" alt="" />
-                </div>
-                <div className="services__area-item-content">
-                  <h5>
-                    <a href="#">Pickup & Drop</a>
-                  </h5>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesArea services={services} />
       {/* <!-- Services Area End --> */}
       {/* <!-- Feature Area Start  --> */}
 
