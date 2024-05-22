@@ -11,14 +11,7 @@ import features from '@/data/features' // import data
 import ServicesArea from '@/components/service/servicesArea'
 import { Service } from '@/data/serviceData' // Importing the Service interface
 import serviceData from '@/data/serviceData' // Importing the service data
-
-// Data object
-const bannerData = {
-  title: 'The Best Hotel',
-  subtitle: 'Deals in Fogo',
-  imageLink: 'assets/fotos/banner-1.jpg',
-  videoLink: 'https://www.youtube.com/watch?v=JhVtUBct7ik',
-}
+import bannerData from '@/data/bannerData' // Importing the banner data
 
 export default function Home() {
   // You can fetch or define the service data here
