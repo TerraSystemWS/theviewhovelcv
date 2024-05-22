@@ -1,5 +1,3 @@
-// deluxeData.ts
-
 export interface DeluxeItemData {
   imageUrl: string
   price: string

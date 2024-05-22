@@ -1,5 +1,3 @@
-// serviceData.ts
-
 export interface Service {
   iconSrc: string
   title: string
