@@ -1,9 +1,13 @@
 // 'use client'
 import Banner from '@/components/home/Banner'
 import Accommodations from '@/components/home/Accommodations'
-import accommodationsData from '@/data/accommodationsData'
+import accommodationsData from '@/data/accommodationsData' // importacao de dados
 import DeluxeArea from '@/components/home/DeluxeArea'
 import deluxeData from '@/data/deluxeData' // importacao de dados
+import VideoArea from '@/components/home/VideoArea'
+import videoareaData from '@/data/videoareaData' //importacao de dados
+import FeatureArea from '@/components/home/FeatureArea'
+import features from '@/data/features' // import data
 
 // Data object
 const bannerData = {
@@ -33,29 +37,7 @@ export default function Home() {
 
       {/* <!-- Deluxe Area End --> */}
       {/* <!-- Video Area Start --> */}
-      <div className="video__area" data-background="assets/img/video.jpg">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xxl-6 col-xl-7 col-lg-8">
-              <div className="video__area-title">
-                <h2>Book hotel rooms, get deals & book flights online.</h2>
-              </div>
-            </div>
-            <div className="col-xxl-6 col-xl-5 col-lg-4">
-              <div className="video__area-right">
-                <div className="video__play">
-                  <a
-                    className="video-popup"
-                    href="https://www.youtube.com/watch?v=0WC-tD-njcA"
-                  >
-                    <i className="fas fa-play"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <VideoArea {...videoareaData} />
       {/* <!-- Video Area End --> */}
       {/* <!-- Services Area Start --> */}
       <div className="services__area section-padding">
@@ -113,119 +95,9 @@ export default function Home() {
         </div>
       </div>
       {/* <!-- Services Area End --> */}
-      {/* <!-- Feature Area Start --> */}
-      <div className="feature__area">
-        <div className="container">
-          <div className="row align-items-center bg-left mb-60">
-            <div className="col-xl-6 col-lg-6">
-              <div className="feature__area-image">
-                <img
-                  className="img__full"
-                  src="assets/img/features/feature-1.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="feature__area-left">
-                <div className="feature__area-left-title">
-                  <span className="subtitle__one">Our Food</span>
-                  <h2>Restaurant Silo</h2>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor. Mauris sit amet lectus porta,
-                  </p>
-                  <a className="theme-border-btn" href="services-details.html">
-                    Read More
-                    <i className="fal fa-long-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center bg-right mb-60">
-            <div className="col-xl-6 col-lg-6  order-last order-lg-first">
-              <div className="feature__area-left">
-                <div className="feature__area-left-title">
-                  <span className="subtitle__one">Read Our Books</span>
-                  <h2>The Library</h2>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor. Mauris sit amet lectus porta,
-                  </p>
-                  <a className="theme-border-btn" href="services-details.html">
-                    Read More
-                    <i className="fal fa-long-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="feature__area-image">
-                <img
-                  className="img__full"
-                  src="assets/img/features/feature-2.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center bg-left mb-60">
-            <div className="col-xl-6 col-lg-6">
-              <div className="feature__area-image">
-                <img
-                  className="img__full"
-                  src="assets/img/features/feature-3.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="feature__area-left">
-                <div className="feature__area-left-title">
-                  <span className="subtitle__one">Fitness Equipment</span>
-                  <h2>Exercise equipment</h2>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor. Mauris sit amet lectus porta,
-                  </p>
-                  <a className="theme-border-btn" href="services-details.html">
-                    Read More
-                    <i className="fal fa-long-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center bg-right">
-            <div className="col-xl-6 col-lg-6 order-last order-lg-first">
-              <div className="feature__area-left">
-                <div className="feature__area-left-title">
-                  <span className="subtitle__one">Experiences</span>
-                  <h2>Swimming Pool</h2>
-                  <p>
-                    Proin massa augue, lacinia at blandit ac, fringilla
-                    scelerisque tortor. Mauris sit amet lectus porta,
-                  </p>
-                  <a className="theme-border-btn" href="services-details.html">
-                    Read More
-                    <i className="fal fa-long-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="feature__area-image">
-                <img
-                  className="img__full"
-                  src="assets/img/features/feature-4.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* <!-- Feature Area Start  --> */}
+
+      <FeatureArea features={features} />
       {/* <!-- Feature Area End --> */}
       {/* <!-- Testimonial Area Start -->	 */}
       <div className="testimonial__area section-padding pb-0">
