@@ -6,6 +6,11 @@ export interface Post {
 }
 
 const postsData: Post[] = [
+  // Add more posts as needed
+]
+{
+  /**
+const postsData: Post[] = [
   {
     date: 'July 27, 2022',
     title: 'The ultimate guide to finding the best hotels in your area.',
@@ -26,5 +31,7 @@ const postsData: Post[] = [
   },
   // Add more posts as needed
 ]
+ */
+}
 
 export default postsData

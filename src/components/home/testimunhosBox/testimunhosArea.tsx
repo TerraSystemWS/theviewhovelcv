@@ -7,6 +7,8 @@ interface TestimunhoAreaProps {
     role: string
     image: string
     quote: string
+    With: number
+    height: number
   }[]
 }
 
@@ -26,6 +28,8 @@ const TestimunhoArea: React.FC<TestimunhoAreaProps> = ({ testimunhoData }) => {
                       role={testimonial.role}
                       image={testimonial.image}
                       quote={testimonial.quote}
+                      With={testimonial.With}
+                      height={testimonial.height}
                     />
                   ))}
                 </div>
