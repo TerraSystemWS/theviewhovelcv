@@ -159,10 +159,10 @@ export default function Footer() {
                 <div className="copyright__area-right t-right md-t-center">
                   <ul>
                     <li>
-                      <a href="#">FAQ</a>
+                      <a href="/faq">FAQ</a>
                     </li>
                     <li>
-                      <a href="#">Terms of Use</a>
+                      <a href="/terms">Terms of Use</a>
                     </li>
                     <li>
                       <a href="#">Privacy Policy</a>
