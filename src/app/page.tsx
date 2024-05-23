@@ -8,10 +8,14 @@ import VideoArea from '@/components/home/VideoArea'
 import videoareaData from '@/data/videoareaData' //importacao de dados
 import FeatureArea from '@/components/home/FeatureArea'
 import features from '@/data/features' // import data
-import ServicesArea from '@/components/service/servicesArea'
+import ServicesArea from '@/components/home/service/servicesArea'
 import { Service } from '@/data/serviceData' // Importing the Service interface
 import serviceData from '@/data/serviceData' // Importing the service data
 import bannerData from '@/data/bannerData' // Importing the banner data
+import testimunhoData from '@/data/testimunhoData' // Importing the testimujho data
+import TestimunhoArea from '@/components/home/testimunhosBox/testimunhosArea'
+import postsData from '@/data/postsData'
+import PostArea from '@/components/home/posts/postArea'
 
 export default function Home() {
   // You can fetch or define the service data here
@@ -46,199 +50,11 @@ export default function Home() {
       <FeatureArea features={features} />
       {/* <!-- Feature Area End --> */}
       {/* <!-- Testimonial Area Start -->	 */}
-      <div className="testimonial__area section-padding pb-0">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="testimonial__area-bg">
-                <div className="swiper testimonial__slider">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="testimonial__area-item">
-                        <div className="testimonial__area-item-image">
-                          <img
-                            className="img__full"
-                            src="assets/img/avatar/testimonial-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="testimonial__area-item-content">
-                          <h4>David Beckham</h4>
-                          <span>UX Designer</span>
-                          <p>
-                            Proin massa augue, lacinia at blandit ac, fringilla
-                            scelerisque tortor. Mauris sit amet lectus porta,
-                            porta lectus non, malesuada neque. Integer in tempus
-                            leo. Quisque vitae leo ac ex suscipit iaculis eu in
-                            nisl. Donec vestibulum volutpat lectus, vel aliquet
-                            massa porttitor in. Integer eleifend
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="testimonial__area-item">
-                        <div className="testimonial__area-item-image">
-                          <img
-                            className="img__full"
-                            src="assets/img/avatar/testimonial-2.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="testimonial__area-item-content">
-                          <h4>David Fincher</h4>
-                          <span>UX Designer</span>
-                          <p>
-                            Proin massa augue, lacinia at blandit ac, fringilla
-                            scelerisque tortor. Mauris sit amet lectus porta,
-                            porta lectus non, malesuada neque. Integer in tempus
-                            leo. Quisque vitae leo ac ex suscipit iaculis eu in
-                            nisl. Donec vestibulum volutpat lectus, vel aliquet
-                            massa porttitor in. Integer eleifend
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="testimonial__area-item">
-                        <div className="testimonial__area-item-image">
-                          <img
-                            className="img__full"
-                            src="assets/img/avatar/testimonial-3.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="testimonial__area-item-content">
-                          <h4>Ridley Scott</h4>
-                          <span>UX Designer</span>
-                          <p>
-                            Proin massa augue, lacinia at blandit ac, fringilla
-                            scelerisque tortor. Mauris sit amet lectus porta,
-                            porta lectus non, malesuada neque. Integer in tempus
-                            leo. Quisque vitae leo ac ex suscipit iaculis eu in
-                            nisl. Donec vestibulum volutpat lectus, vel aliquet
-                            massa porttitor in. Integer eleifend
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="testimonial__area-item-dots">
-                  <div className="pagination"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <TestimunhoArea testimunhoData={testimunhoData} />
+
       {/* <!-- Testimonial Area End -->	 */}
       {/* <!-- Blog Area Start -->	 */}
-      <div className="blog__area section-padding">
-        <div className="container">
-          <div className="row mb-60">
-            <div className="col-xl-12">
-              <div className="blog__area-title">
-                <span className="subtitle__one">Our Blog</span>
-                <h2>Read Our Blog amd News</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xl-4 col-lg-6 xl-mb-30">
-              <div className="blog__area-item">
-                <div className="blog__area-item-image">
-                  <a href="blog-details.html">
-                    <img src="assets/img/blog/blog-1.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="blog__area-item-content">
-                  <div className="blog__area-item-content-box">
-                    <div className="blog__area-item-content-box-date">
-                      <h3>27</h3>
-                      <span>July 2022</span>
-                    </div>
-                    <div className="blog__area-item-content-box-title">
-                      <h5>
-                        <a href="blog-details.html">
-                          The ultimate guide to finding the best hotels in your
-                          area.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="blog__area-item-content-btn">
-                    <a className="simple-btn-2" href="blog-details.html">
-                      Read More
-                      <i className="fal fa-long-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 lg-mb-30">
-              <div className="blog__area-item blog__area-item-hover">
-                <div className="blog__area-item-image">
-                  <a href="blog-details.html">
-                    <img src="assets/img/blog/blog-2.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="blog__area-item-content">
-                  <div className="blog__area-item-content-box">
-                    <div className="blog__area-item-content-box-date">
-                      <h3>27</h3>
-                      <span>July 2022</span>
-                    </div>
-                    <div className="blog__area-item-content-box-title">
-                      <h5>
-                        <a href="blog-details.html">
-                          Book a room Today most Affordable Rates.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="blog__area-item-content-btn">
-                    <a className="simple-btn-2" href="blog-details.html">
-                      Read More
-                      <i className="fal fa-long-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6">
-              <div className="blog__area-item">
-                <div className="blog__area-item-image">
-                  <a href="blog-details.html">
-                    <img src="assets/img/blog/blog-3.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="blog__area-item-content">
-                  <div className="blog__area-item-content-box">
-                    <div className="blog__area-item-content-box-date">
-                      <h3>27</h3>
-                      <span>July 2022</span>
-                    </div>
-                    <div className="blog__area-item-content-box-title">
-                      <h5>
-                        <a href="blog-details.html">
-                          Hotel Booking is the best choice for hotel booking.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="blog__area-item-content-btn">
-                    <a className="simple-btn-2" href="blog-details.html">
-                      Read More
-                      <i className="fal fa-long-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PostArea posts={postsData} />
       {/* <!-- Blog Area End -->	 */}
     </>
   )
