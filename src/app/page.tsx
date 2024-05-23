@@ -1,79 +1,61 @@
-'use client'
-
-import { useState, useEffect } from 'react';
+// 'use client'
+import Banner from '@/components/home/Banner'
+import Accommodations from '@/components/home/Accommodations'
+import accommodationsData from '@/data/accommodationsData' // importacao de dados
+import DeluxeArea from '@/components/home/DeluxeArea'
+import deluxeData from '@/data/deluxeData' // importacao de dados
+import VideoArea from '@/components/home/VideoArea'
+import videoareaData from '@/data/videoareaData' //importacao de dados
+import FeatureArea from '@/components/home/FeatureArea'
+import features from '@/data/features' // import data
+import ServicesArea from '@/components/home/service/servicesArea'
+import { Service } from '@/data/serviceData' // Importing the Service interface
+import serviceData from '@/data/serviceData' // Importing the service data
+import bannerData from '@/data/bannerData' // Importing the banner data
+import testimunhoData from '@/data/testimunhoData' // Importing the testimujho data
+import TestimunhoArea from '@/components/home/testimunhosBox/testimunhosArea'
+import postsData from '@/data/postsData'
+import PostArea from '@/components/home/posts/postArea'
 
 export default function Home() {
-  const [countdown, setCountdown] = useState({
-    days: '00',
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = new Date("May 15, 2024 12:59:59").getTime() - now;
-      
-      const days = Math.max(Math.floor(distance / (1000 * 60 * 60 * 24)), 0);
-      const hours = Math.max(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), 0);
-      const minutes = Math.max(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)), 0);
-      const seconds = Math.max(Math.floor((distance % (1000 * 60)) / 1000), 0);
-      
-      setCountdown({
-        days: days.toString().padStart(2, '0'),
-        hours: hours.toString().padStart(2, '0'),
-        minutes: minutes.toString().padStart(2, '0'),
-        seconds: seconds.toString().padStart(2, '0'),
-      });
-
-      if (distance < 0) {
-        clearInterval(interval);
-        // Handle expired state
-        // For example:
-        // document.getElementById("demo").innerHTML="EXPIRED";
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  // You can fetch or define the service data here
+  const services: Service[] = serviceData
 
   return (
-    <div className="coming__soon" data-background="assets/img/features/coming-soon.jpg">
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="coming__soon-title">
-              <h1>Coming Soon</h1>
-              <div className="countdown">
-                <div className="countdown-item">
-                  <h3 className="days">{countdown.days}</h3>
-                  <span>Days</span>
-                </div>
-                <div className="countdown-item">
-                  <h3 className="hours">{countdown.hours}</h3>
-                  <span>Hours</span>
-                </div>
-                <div className="countdown-item">
-                  <h3 className="minutes">{countdown.minutes}</h3>
-                  <span>Minutes</span>
-                </div>
-                <div className="countdown-item">
-                  <h3 className="seconds">{countdown.seconds}</h3>
-                  <span>Seconds</span>
-                </div>
-              </div>
-              <div className="subscribe">
-                <h6>Subscribe to Our newsletter stay with us</h6>
-                <form action="#">
-                  <input type="email" name="email" placeholder="Email Address" required />
-                  <button type="submit">Subscribe</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    <>
+      {/* <!-- Banner Area Start -->	 */}
+      <Banner
+        title={bannerData.title}
+        subtitle={bannerData.subtitle}
+        imageLink={bannerData.imageLink}
+        videoLink={bannerData.videoLink}
+      />
+      {/* <!-- Banner Area End --> */}
+      {/* <!-- Accommodations Area Start --> */}
+      <Accommodations {...accommodationsData} />
+      {/* <!-- Accommodations Area End --> */}
+      {/* <!-- Deluxe Area Start --> */}
+
+      <DeluxeArea deluxeData={deluxeData} />
+
+      {/* <!-- Deluxe Area End --> */}
+      {/* <!-- Video Area Start --> */}
+      <VideoArea {...videoareaData} />
+      {/* <!-- Video Area End --> */}
+      {/* <!-- Services Area Start --> */}
+      <ServicesArea services={services} />
+      {/* <!-- Services Area End --> */}
+      {/* <!-- Feature Area Start  --> */}
+
+      <FeatureArea features={features} />
+      {/* <!-- Feature Area End --> */}
+      {/* <!-- Testimonial Area Start -->	 */}
+      <TestimunhoArea testimunhoData={testimunhoData} />
+
+      {/* <!-- Testimonial Area End -->	 */}
+      {/* <!-- Blog Area Start -->	 */}
+      <PostArea posts={postsData} />
+      {/* <!-- Blog Area End -->	 */}
+    </>
+  )
 }
