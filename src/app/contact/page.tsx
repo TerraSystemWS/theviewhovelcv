@@ -5,15 +5,15 @@ const ContactArea: React.FC = () => {
     <>
       {/* <!-- Page Banner Start --> */}
       <div
-        class="page__banner"
-        data-background="assets/img/banner/page-banner-9.jpg"
+        className="page__banner"
+        data-background="/assets/img/banner/page-banner-9.jpg"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="page__banner-title">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="page__banner-title">
                 <h1>Contact Us</h1>
-                <div class="page__banner-title-menu">
+                <div className="page__banner-title-menu">
                   <ul>
                     <li>
                       <a href="index.html">Home</a>
