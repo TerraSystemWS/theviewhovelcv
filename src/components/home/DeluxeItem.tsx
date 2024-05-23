@@ -8,6 +8,8 @@ interface DeluxeAreaItemProps {
   roomType: string
   link: string
   columnClasses: string
+  With: number
+  height: number
 }
 
 const DeluxeItem: React.FC<DeluxeAreaItemProps> = ({
@@ -16,12 +18,14 @@ const DeluxeItem: React.FC<DeluxeAreaItemProps> = ({
   roomType,
   link,
   columnClasses,
+  With,
+  height,
 }) => {
   return (
     <div className={columnClasses}>
       <div className="deluxe__area-item">
         <div className="deluxe__area-item-image">
-          <Image src={imageUrl} alt="" width={600} height={400} />
+          <Image src={imageUrl} alt="" width={With} height={height} />
         </div>
         <div className="deluxe__area-item-content">
           <h6>

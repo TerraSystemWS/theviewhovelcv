@@ -76,6 +76,8 @@ const DeluxeArea: React.FC<DeluxeAreaProps> = ({ deluxeData }) => {
               roomType={item.roomType}
               link={item.link}
               columnClasses={item.columnClasses}
+              With={item.With}
+              height={item.height}
             />
           ))}
         </div>
