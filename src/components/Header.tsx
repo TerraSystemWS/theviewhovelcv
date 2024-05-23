@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, menuItems }) => {
           <div className="header__area-menubar">
             <div className="header__area-menubar-left">
               <div className="header__area-menubar-left-logo">
-                <a href="index.html">
+                <a href="/">
                   <img src={logoSrc} alt="" />
                 </a>
                 <div className="responsive-menu"></div>
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, menuItems }) => {
             </div>
             <div className="header__area-menubar-right-box">
               <div className="header__area-menubar-right-box-btn">
-                <a className="theme-btn" href="contact.html">
+                <a className="theme-btn" href="contact">
                   Book Now<i className="fal fa-long-arrow-right"></i>
                 </a>
               </div>
