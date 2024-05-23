@@ -11,7 +11,7 @@ export interface MenuItem {
 export const menuItems: MenuItem[] = [
   {
     title: 'Home',
-    link: '#',
+    link: '/',
     subMenu: [
       // { title: 'Home 01', link: 'index.html' },
       // { title: 'Home 02', link: 'index-2.html' },
