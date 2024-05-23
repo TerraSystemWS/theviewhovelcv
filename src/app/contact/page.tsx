@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const ContactArea: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const ContactArea: React.FC = () => {
                 <div className="page__banner-title-menu">
                   <ul>
                     <li>
-                      <a href="index.html">Home</a>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
                       <span>-</span>Contact Us
@@ -49,7 +50,7 @@ const ContactArea: React.FC = () => {
                   <div className="contact__area-info-item-content">
                     <span>Emergency Help</span>
                     <h6>
-                      <a href="tel:002389896169">+238 989 61 69</a>
+                      <Link href="tel:002389896169">+238 989 61 69</Link>
                     </h6>
                   </div>
                 </div>
@@ -60,9 +61,9 @@ const ContactArea: React.FC = () => {
                   <div className="contact__area-info-item-content">
                     <span>Quick Email</span>
                     <h6>
-                      <a href="mailto:support@gamil.com">
+                      <Link href="mailto:support@gamil.com">
                         reservas@theviewhotelcv.com
-                      </a>
+                      </Link>
                     </h6>
                   </div>
                 </div>
@@ -73,9 +74,9 @@ const ContactArea: React.FC = () => {
                   <div className="contact__area-info-item-content">
                     <span>Office Address</span>
                     <h6>
-                      <a href="#">
+                      <Link href="#">
                         Alto Vale dos cavaleiros, Sao Filipe, Fogo{' '}
-                      </a>
+                      </Link>
                     </h6>
                   </div>
                 </div>
@@ -108,11 +109,7 @@ const ContactArea: React.FC = () => {
             <div className="col-xl-7 col-lg-7">
               <div className="contact__area-form">
                 <h3 className="mb-35">Send Massage</h3>
-                <form
-                  id="contact-form"
-                  action="assets/form/mail.php"
-                  method="POST"
-                >
+                <form id="contact-form" action="" method="POST">
                   <div className="row">
                     <div className="col-sm-6 mb-30">
                       <div className="contact__area-form-item">

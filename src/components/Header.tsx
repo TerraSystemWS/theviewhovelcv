@@ -1,6 +1,5 @@
-// Header.tsx
-
 import React from 'react'
+import Link from 'next/link'
 
 interface MenuItem {
   title: string
@@ -18,7 +17,7 @@ const MenuItemComponent: React.FC<{ item: MenuItem }> = ({ item }) => {
 
   return (
     <li className={hasSubMenu ? 'menu-item-has-children' : ''}>
-      <a href={item.link}>{item.title}</a>
+      <Link href={item.link}>{item.title}</Link>
       {hasSubMenu && (
         <ul className="sub-menu">
           {item.subMenu?.map((subItem, index) => (
@@ -38,9 +37,9 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, menuItems }) => {
           <div className="header__area-menubar">
             <div className="header__area-menubar-left">
               <div className="header__area-menubar-left-logo">
-                <a href="/">
+                <Link href="/">
                   <img src={logoSrc} alt="" />
-                </a>
+                </Link>
                 <div className="responsive-menu"></div>
               </div>
             </div>
@@ -55,9 +54,9 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, menuItems }) => {
             </div>
             <div className="header__area-menubar-right-box">
               <div className="header__area-menubar-right-box-btn">
-                <a className="theme-btn" href="contact">
+                <Link className="theme-btn" href="contact">
                   Book Now<i className="fal fa-long-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
