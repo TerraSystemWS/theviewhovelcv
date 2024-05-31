@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 interface FeatureProps {
   subtitle: string
@@ -33,7 +34,13 @@ const Right: React.FC<FeatureProps> = ({
       </div>
       <div className="col-xl-6 col-lg-6">
         <div className="feature__area-image">
-          <img className="img__full" src={imageUrl} alt={altText} />
+          <Image
+            className="img__full"
+            src={imageUrl}
+            alt={altText}
+            width={1260}
+            height={820}
+          />
         </div>
       </div>
     </div>
