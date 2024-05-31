@@ -8,6 +8,7 @@ interface Feature {
   subtitle: string
   description: string
   imageUrl: string
+  link: string
 }
 
 interface FeatureAreaProps {
@@ -30,6 +31,7 @@ const FeatureArea: React.FC<FeatureAreaProps> = ({
               description={feature.description}
               imageUrl={feature.imageUrl}
               altText={`Feature ${index + 1}`} // Assuming alt text for images
+              link={feature.link}
             />
           ) : (
             <Right
@@ -39,6 +41,7 @@ const FeatureArea: React.FC<FeatureAreaProps> = ({
               description={feature.description}
               imageUrl={feature.imageUrl}
               altText={`Feature ${index + 1}`} // Assuming alt text for images
+              link={feature.link}
             />
           )
         )}

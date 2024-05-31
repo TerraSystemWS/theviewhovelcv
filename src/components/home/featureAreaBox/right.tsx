@@ -6,6 +6,7 @@ interface FeatureProps {
   description: string
   imageUrl: string
   altText: string
+  link: string
 }
 
 const Right: React.FC<FeatureProps> = ({
@@ -14,6 +15,7 @@ const Right: React.FC<FeatureProps> = ({
   description,
   imageUrl,
   altText,
+  link,
 }) => {
   return (
     <div className="row align-items-center bg-right mb-60">
@@ -23,7 +25,7 @@ const Right: React.FC<FeatureProps> = ({
             <span className="subtitle__one">{subtitle}</span>
             <h2>{title}</h2>
             <p>{description}</p>
-            <a className="theme-border-btn" href="services-details.html">
+            <a className="theme-border-btn" href={link}>
               Read More<i className="fal fa-long-arrow-right"></i>
             </a>
           </div>
