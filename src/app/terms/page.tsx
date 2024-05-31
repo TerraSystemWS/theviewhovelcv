@@ -12,7 +12,7 @@ const TermsOfUsePage: React.FC = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="page__banner-title">
-                <h1>Contact Us</h1>
+                <h1>Terms Of Use</h1>
                 <div className="page__banner-title-menu">
                   <ul>
                     <li>
