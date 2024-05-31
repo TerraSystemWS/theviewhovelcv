@@ -95,24 +95,24 @@ export default function Footer() {
                 <div className="footer__area-widget-menu">
                   <ul>
                     <li>
-                      <a href="services-details.html">
+                      <a href="#">
                         <i className="fal fa-angle-double-right"></i>Room
                         Cleaning
                       </a>
                     </li>
                     <li>
-                      <a href="services-details.html">
+                      <a href="#">
                         <i className="fal fa-angle-double-right"></i>Restaurant
                       </a>
                     </li>
                     <li>
-                      <a href="services-details.html">
+                      <a href="#">
                         <i className="fal fa-angle-double-right"></i>Swimming
                         pool
                       </a>
                     </li>
                     <li>
-                      <a href="services-details.html">
+                      <a href="#">
                         <i className="fal fa-angle-double-right"></i>Gamming
                         Room
                       </a>
@@ -159,13 +159,13 @@ export default function Footer() {
                 <div className="copyright__area-right t-right md-t-center">
                   <ul>
                     <li>
-                      <a href="#">FAQ</a>
+                      <a href="/faq">FAQ</a>
                     </li>
                     <li>
-                      <a href="#">Terms of Use</a>
+                      <a href="/terms">Terms of Use</a>
                     </li>
                     <li>
-                      <a href="#">Privacy Policy</a>
+                      <a href="/privacy">Privacy Policy</a>
                     </li>
                   </ul>
                 </div>

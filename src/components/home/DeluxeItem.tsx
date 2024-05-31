@@ -28,11 +28,11 @@ const DeluxeItem: React.FC<DeluxeAreaItemProps> = ({
           <Image src={imageUrl} alt="" width={With} height={height} />
         </div>
         <div className="deluxe__area-item-content">
-          <h6>
+          {/* <h6>
             <a href="#">
               <span>{price}</span> / Night
             </a>
-          </h6>
+          </h6> */}
           <h4>
             <a href={link}>{roomType}</a>
           </h4>
