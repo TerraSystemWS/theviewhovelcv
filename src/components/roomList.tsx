@@ -28,10 +28,10 @@ const RoomListItem: React.FC<RoomListItemProps> = ({ data }) => {
               <p>{room.description}</p>
               <ul>
                 <li>
-                  <i className="fal fa-bed-alt"></i>({room.beds}) bed's
+                  <i className="fal fa-bed-alt"></i>({room.beds}) bed&apos;s
                 </li>
                 <li>
-                  <i className="fal fa-users"></i>({room.guests}) Guest's
+                  <i className="fal fa-users"></i>({room.guests}) Guest&apos;s
                 </li>
               </ul>
             </div>
