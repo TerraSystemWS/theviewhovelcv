@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 interface DeluxeAreaItemProps {
   imageUrl: string
-  price: string
+  price: number
   roomType: string
   link: string
   columnClasses: string
