@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import SearchForm from '@/components/home/SearchForm'
 
 interface BannerProps {
   title: string
@@ -34,7 +36,8 @@ const Banner: React.FC<BannerProps> = ({
           </div>
         </div>
         <div className="row">
-          <form action="#">
+          <SearchForm />
+          {/* <form action="#">
             <div className="check__area">
               <div className="check__area-item">
                 <p>
@@ -65,7 +68,7 @@ const Banner: React.FC<BannerProps> = ({
                 </button>
               </div>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
     </div>
