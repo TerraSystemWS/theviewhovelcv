@@ -21,25 +21,31 @@ export default function Footer() {
                   <div className="footer__area-widget-about-social">
                     <ul>
                       <li>
-                        <a href="#">
+                        <a
+                          href="https://www.facebook.com/TheViewEntertainmentCenter?mibextid=LQQJ4d"
+                          target="_blank"
+                        >
                           <i className="fab fa-facebook-f"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
+                        <a
+                          href="https://www.instagram.com/the_view_cv?igsh=MWZ3bW1zdDVuNXR6MQ=="
+                          target="_blank"
+                        >
+                          <i className="fab fa-instagram"></i>
                         </a>
                       </li>
-                      <li>
-                        <a href="#">
+                      {/* <li>
+                        <a href="#" target="_blank">
                           <i className="fab fa-behance"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#" target="_blank">
                           <i className="fab fa-youtube"></i>
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -148,10 +154,16 @@ export default function Footer() {
                 <div className="copyright__area-left md-t-center">
                   <p>
                     Copyright © 2022{' '}
-                    <a href="https://themeforest.net/user/themeori/portfolio">
+                    <a
+                      href="https://themeforest.net/user/themeori/portfolio"
+                      target="_blank"
+                    >
                       ThemeOri
                     </a>{' '}
-                    Website by <a href="index.html">TerraSystem</a>
+                    Website by{' '}
+                    <a href="https://terrasystem.cv" target="_blank">
+                      TerraSystem
+                    </a>
                   </p>
                 </div>
               </div>
@@ -165,7 +177,7 @@ export default function Footer() {
                       <a href="/terms">Terms of Use</a>
                     </li>
                     <li>
-                      <a href="/privacy">Privacy Policy</a>
+                      <a href="/policy">Privacy Policy</a>
                     </li>
                   </ul>
                 </div>

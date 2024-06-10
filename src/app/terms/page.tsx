@@ -29,13 +29,14 @@ const TermsOfUsePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="accommodations__area section-padding">
+      <div className="flex justify-center">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-12 col-lg-12 ">
-              <div className="accommodations__area-title">
-                <div className="terms-of-use">
-                  <h1>Terms of Use</h1>
+          <div className="row">
+            <div className="col-2"></div>
+            <div className="col-8">
+              <div className="terms-of-use">
+                <h1 className="m-5">Terms of Use</h1>
+                <article className="m-5">
                   <p>
                     These terms and conditions outline the rules and regulations
                     for the use of TheViewHotel&apos;s Website.
@@ -81,10 +82,11 @@ const TermsOfUsePage: React.FC = () => {
                     use subjected to restrictions set in these terms and
                     conditions.
                   </p>
-                  {/* Add more sections as needed */}
-                </div>
+                </article>
+                {/* Add more sections as needed */}
               </div>
             </div>
+            <div className="col-2"></div>
           </div>
         </div>
       </div>
