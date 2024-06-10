@@ -19,8 +19,8 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
-    title: 'Pages',
-    link: '#',
+    title: 'Services',
+    link: '/services',
     subMenu: [
       // { title: 'About', link: 'about.html' },
       // { title: 'Team', link: 'services-team.html' },
@@ -30,7 +30,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     title: 'Room',
-    link: '#',
+    link: '/room-list',
     subMenu: [
       // { title: 'Room Style', link: 'room-style.html' },
       // { title: 'Room Modern', link: 'room-modern.html' },
@@ -40,7 +40,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     title: 'Blog',
-    link: '#',
+    link: '/posts',
     subMenu: [
       // { title: 'Blog Grid', link: 'blog-grid.html' },
       // { title: 'Blog Standard', link: 'blog-standard.html' },
