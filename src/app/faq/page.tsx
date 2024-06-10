@@ -1,21 +1,7 @@
 import React from 'react'
 import FAQ from '@/components/FAQ'
 import Link from 'next/link'
-import { FaqData } from '../../data/faqData' // Importando o tipo de dados de FAQ
 import faqData from '../../data/faqData' // Importando os dados de FAQ
-
-// const faqs = [
-//   {
-//     question: 'What is your return policy?',
-//     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-//   },
-//   {
-//     question: 'How can I track my order?',
-//     answer:
-//       'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-//   },
-//   // Add more FAQ items as needed
-// ]
 
 const App: React.FC = () => {
   return (
