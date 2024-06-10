@@ -55,7 +55,8 @@ const Policy: React.FC = () => {
                   pages or products that you view, which websites or search
                   terms referred you to the site, and information about how you
                   interact with the site. We refer to this
-                  automatically-collected information as "Device Information".
+                  automatically-collected information as &quot;Device
+                  Information&quot;.
                 </p>
 
                 <h2>Sharing Your Personal Information</h2>
