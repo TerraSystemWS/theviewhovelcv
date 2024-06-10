@@ -15,8 +15,8 @@ export default function Footer() {
                     </a>
                   </div>
                   <p>
-                    Desfrutar de um hotel luxuoso é como ser abraçado pelo
-                    conforto em cada momento da sua estadia.
+                    Enjoying a luxurious hotel is like being embraced by comfort
+                    at every moment of your stay.
                   </p>
                   <div className="footer__area-widget-about-social">
                     <ul>
