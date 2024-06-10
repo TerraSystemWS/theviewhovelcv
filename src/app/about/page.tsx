@@ -55,7 +55,7 @@ const About: React.FC = () => {
               <div className="offers__area-image">
                 <img
                   className="img__full"
-                  src="assets/img/theview.jpeg"
+                  src="/assets/img/theview.jpeg"
                   alt="the view hotel Foto"
                 />
               </div>
