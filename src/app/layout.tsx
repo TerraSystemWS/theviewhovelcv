@@ -37,23 +37,23 @@ export default function RootLayout({
         {/* <!-- Title of Site --> */}
         <title>The View Hotel - Luxury Hotel </title>
         {/* <!-- Favicons --> */}
-        <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+        <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
         {/* <!-- Bootstrap CSS --> */}
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         {/* <!-- Font Awesome CSS -- /> */}
-        <link rel="stylesheet" href="assets/css/all.css" />
+        <link rel="stylesheet" href="/assets/css/all.css" />
         {/* <!-- Animate CSS -- /> */}
-        <link rel="stylesheet" href="assets/css/animate.css" />
+        <link rel="stylesheet" href="/assets/css/animate.css" />
         {/* <!-- Nice Select CSS -- /> */}
-        <link rel="stylesheet" href="assets/css/nice-select.css" />
+        <link rel="stylesheet" href="/assets/css/nice-select.css" />
         {/* <!-- Swiper Bundle CSS -- /> */}
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
         {/* <!-- Magnific Popup CSS -- /> */}
-        <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         {/* <!-- Mean Menu CSS -- /> */}
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+        <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
         {/* <!-- Custom CSS -- /> */}
-        <link rel="stylesheet" href="assets/sass/style.css" />
+        <link rel="stylesheet" href="/assets/sass/style.css" />
       </head>
 
       <body>
@@ -86,29 +86,29 @@ export default function RootLayout({
         </div>
         {/* <!-- Scroll Btn End --> */}
         {/* <!-- Main JS --> */}
-        <Script src="assets/js/jquery-3.6.0.min.js"></Script>
+        <Script src="/assets/js/jquery-3.6.0.min.js"></Script>
         {/* <!-- Bootstrap JS --> */}
-        <Script src="assets/js/bootstrap.min.js"></Script>
+        <Script src="/assets/js/bootstrap.min.js"></Script>
         {/* <!-- Counter Up JS --> */}
-        <Script src="assets/js/jquery.counterup.min.js"></Script>
+        <Script src="/assets/js/jquery.counterup.min.js"></Script>
         {/* <!-- Popper JS --> */}
-        <Script src="assets/js/popper.min.js"></Script>
+        <Script src="/assets/js/popper.min.js"></Script>
         {/* <!-- Magnific Popup JS --> */}
-        <Script src="assets/js/jquery.magnific-popup.min.js"></Script>
+        <Script src="/assets/js/jquery.magnific-popup.min.js"></Script>
         {/* <!-- Nice Select JS --> */}
-        <Script src="assets/js/jquery.nice-select.min.js"></Script>
+        <Script src="/assets/js/jquery.nice-select.min.js"></Script>
         {/* <!-- Swiper Bundle JS --> */}
-        <Script src="assets/js/swiper-bundle.min.js"></Script>
+        <Script src="/assets/js/swiper-bundle.min.js"></Script>
         {/* <!-- Waypoints JS --> */}
-        <Script src="assets/js/jquery.waypoints.min.js"></Script>
+        <Script src="/assets/js/jquery.waypoints.min.js"></Script>
         {/* <!-- Mean Menu JS --> */}
-        <Script src="assets/js/jquery.meanmenu.min.js"></Script>
+        <Script src="/assets/js/jquery.meanmenu.min.js"></Script>
         {/* <!-- Isotope JS --> */}
-        <Script src="assets/js/isotope.pkgd.min.js"></Script>
+        <Script src="/assets/js/isotope.pkgd.min.js"></Script>
         {/* <!-- Countdown JS --> */}
         {/* <Script src="assets/js/countdown.js"></Script> */}
         {/* <!-- Custom JS --> */}
-        <Script src="assets/js/custom.js"></Script>
+        <Script src="/assets/js/custom.js"></Script>
       </body>
     </html>
   )

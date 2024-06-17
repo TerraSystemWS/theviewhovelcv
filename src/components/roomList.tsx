@@ -1,7 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 interface RoomListItemProps {
   data: {
+    id: number
+    slug: string
     roomType: string
     description: string
     imageUrl: string
@@ -19,7 +23,7 @@ const RoomListItem: React.FC<RoomListItemProps> = ({ data }) => {
         <div className="room__list-item" key={index}>
           <div className="room__list-item-left">
             <div className="room__list-item-image">
-              <img src={room.imageUrl} alt="" width={300} height={250} />
+              <Image src={room.imageUrl} alt="" width={300} height={250} />
             </div>
           </div>
           <div className="room__list-item-right">
@@ -43,9 +47,9 @@ const RoomListItem: React.FC<RoomListItemProps> = ({ data }) => {
                   <span>{room.rating}</span>2k
                 </p>
               </div>
-              <a className="simple-btn" href="/room-details/id">
+              <Link className="simple-btn" href={`room-list/${room.slug}`}>
                 <i className="far fa-chevron-right"></i>Read More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

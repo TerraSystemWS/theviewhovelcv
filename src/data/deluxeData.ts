@@ -1,4 +1,6 @@
 export interface DeluxeItemData {
+  id: number
+  slug: string
   imageUrl: string
   price: number
   roomType: string
@@ -14,6 +16,8 @@ export interface DeluxeItemData {
 
 const deluxeData: DeluxeItemData[] = [
   {
+    id: 1,
+    slug: 'single-room',
     imageUrl: '/assets/img/luxury/luxury-1.jpg',
     price: 8190,
     roomType: 'Single Room',
@@ -27,6 +31,8 @@ const deluxeData: DeluxeItemData[] = [
     rating: 0,
   },
   {
+    id: 2,
+    slug: 'suite-room',
     imageUrl: '/assets/img/luxury/luxury-2.jpg',
     price: 13490,
     roomType: 'Suite Room',
@@ -40,6 +46,8 @@ const deluxeData: DeluxeItemData[] = [
     rating: 0,
   },
   {
+    id: 3,
+    slug: 'double-room',
     imageUrl: '/assets/img/luxury/luxury-3.jpg',
     price: 10390,
     roomType: 'Double Room',
@@ -53,6 +61,8 @@ const deluxeData: DeluxeItemData[] = [
     rating: 0,
   },
   {
+    id: 4,
+    slug: 'single-room',
     imageUrl: '/assets/img/luxury/luxury-4.jpg',
     price: 8190,
     roomType: 'Single Room',
@@ -66,6 +76,8 @@ const deluxeData: DeluxeItemData[] = [
     rating: 0,
   },
   {
+    id: 5,
+    slug: 'twin-room',
     imageUrl: '/assets/img/luxury/luxury-5.jpg',
     price: 10390,
     roomType: 'Twin Room',
