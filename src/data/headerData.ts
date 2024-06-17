@@ -47,5 +47,5 @@ export const menuItems: MenuItem[] = [
       // { title: 'Blog Details', link: 'blog-details.html' },
     ],
   },
-  { title: 'Contact', link: 'contact' },
+  { title: 'Contact', link: '/contact' },
 ]
