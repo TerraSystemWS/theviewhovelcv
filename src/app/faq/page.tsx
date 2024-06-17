@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="page__banner-title">
-                <h1>FAQ</h1>
+                <h1>Frequently Asked Questions</h1>
                 <div className="page__banner-title-menu">
                   <ul>
                     <li>
