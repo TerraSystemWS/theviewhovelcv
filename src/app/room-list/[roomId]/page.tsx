@@ -58,11 +58,11 @@ export default function Page({ params }: any) {
                     <ul>
                       <li>
                         <i className="fal fa-bed-alt"></i>(
-                        {filteredDeluxeData[0].beds}) bed's
+                        {filteredDeluxeData[0].beds}) bed&apos;s
                       </li>
                       <li>
                         <i className="fal fa-users"></i>(
-                        {filteredDeluxeData[0].guests}) Guest's
+                        {filteredDeluxeData[0].guests}) Guest&apos;s
                       </li>
                     </ul>
                     <h4>
