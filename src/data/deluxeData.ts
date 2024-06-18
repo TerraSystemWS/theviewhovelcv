@@ -62,7 +62,7 @@ const deluxeData: DeluxeItemData[] = [
   },
   {
     id: 4,
-    slug: 'single-room',
+    slug: 'single-room2',
     imageUrl: '/assets/img/luxury/luxury-4.jpg',
     price: 8190,
     roomType: 'Single Room',
