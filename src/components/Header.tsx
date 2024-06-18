@@ -54,7 +54,11 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, menuItems }) => {
             </div>
             <div className="header__area-menubar-right-box">
               <div className="header__area-menubar-right-box-btn">
-                <Link className="theme-btn" href="contact">
+                <Link
+                  className="theme-btn"
+                  href="https://www.booking.com/hotel/cv/the-view.pt-pt.html"
+                  target="_blank"
+                >
                   Book Now<i className="fal fa-long-arrow-right"></i>
                 </Link>
               </div>
