@@ -47,7 +47,7 @@ const RoomListItem: React.FC<RoomListItemProps> = ({ data }) => {
                   <span>{room.rating}</span>2k
                 </p>
               </div>
-              <Link className="simple-btn" href={`room-list/${room.slug}`}>
+              <Link className="simple-btn" href={`/room-list/${room.slug}`}>
                 <i className="far fa-chevron-right"></i>Read More
               </Link>
             </div>
