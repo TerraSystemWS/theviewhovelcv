@@ -69,12 +69,13 @@ const DeluxeArea: React.FC<DeluxeAreaProps> = ({ deluxeData }) => {
         <div className="row deluxe__area-active">
           {/* Render the filtered Deluxe items */}
           {filteredDeluxeItems.map((item: DeluxeItemData, index: number) => (
+            //@ts-ignore
             <DeluxeItem
               key={index}
               imageUrl={item.imageUrl}
               price={item.price}
               roomType={item.roomType}
-              link={item.link}
+              slug={item.slug}
               columnClasses={item.columnClasses}
               With={item.With}
               height={item.height}
