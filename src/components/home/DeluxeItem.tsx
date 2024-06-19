@@ -1,22 +1,24 @@
 'use client'
 
 import Image from 'next/image'
+import { DeluxeItemData } from '@/data/deluxeData'
 
-interface DeluxeAreaItemProps {
-  imageUrl: string
-  price: number
-  roomType: string
-  link: string
-  columnClasses: string
-  With: number
-  height: number
-}
+// interface DeluxeAreaItemProps {
+//   slug: string
+//   imageUrl: string
+//   price: number
+//   roomType: string
+//   link: string
+//   columnClasses: string
+//   With: number
+//   height: number
+// }
 
-const DeluxeItem: React.FC<DeluxeAreaItemProps> = ({
+const DeluxeItem: React.FC<DeluxeItemData> = ({
+  slug,
   imageUrl,
   price,
   roomType,
-  link,
   columnClasses,
   With,
   height,
@@ -34,9 +36,9 @@ const DeluxeItem: React.FC<DeluxeAreaItemProps> = ({
             </a>
           </h6> */}
           <h4>
-            <a href={link}>{roomType}</a>
+            <a href={`/room-list/${slug}`}>{roomType}</a>
           </h4>
-          <a className="simple-btn" href="contact.html">
+          <a className="simple-btn" href="/contact">
             <i className="far fa-chevron-right"></i>
             Booking Now
           </a>
