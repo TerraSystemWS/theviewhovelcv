@@ -1,33 +1,21 @@
 import React from 'react'
+import Link from 'next/link'
 
 interface Tagsprops {
-  tag: string
+  tags: string[]
 }
-const Tags: React.FC = () => {
+const Tags: React.FC<Tagsprops> = ({ tags }) => {
   return (
     <>
       <div className="all__sidebar-item">
-        <h5>Tag'g</h5>
+        <h5>Tag&#39;s</h5>
         <div className="all__sidebar-item-tag">
           <ul>
-            <li>
-              <a href="#">Hotel</a>
-            </li>
-            <li>
-              <a href="#">Booking Now</a>
-            </li>
-            <li>
-              <a href="#">Luxury</a>
-            </li>
-            <li>
-              <a href="#">Single room</a>
-            </li>
-            <li>
-              <a href="#">Small suite</a>
-            </li>
-            <li>
-              <a href="#">Terra</a>
-            </li>
+            {tags.map((tag, index) => (
+              <li key={index}>
+                <Link href={`#${tag}`}>{tag}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
