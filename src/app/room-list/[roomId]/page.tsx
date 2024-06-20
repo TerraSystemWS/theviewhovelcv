@@ -11,7 +11,7 @@ export default function Page({ params }: any) {
     (item) => item.slug === params.roomId
   )
 
-  console.log(filteredDeluxeData)
+  // console.log(filteredDeluxeData)
 
   return (
     <>

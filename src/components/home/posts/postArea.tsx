@@ -20,7 +20,7 @@ const PostArea: React.FC<PostAreaProps> = ({ posts }) => {
           </div>
         </div>
         <div className="row">
-          {postsData.map((post, index) => (
+          {postsData.slice(0, 3).map((post, index) => (
             <PostItem key={index} {...post} />
           ))}
         </div>
