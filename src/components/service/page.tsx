@@ -1,38 +1,40 @@
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 interface ServiceProps {
+  slug: string
   image: string
   name: string
-  socialLinks: string[] // URLs dos links sociais
-  columnClasses: string // Classes das colunas (ex: 'col-xl-4 col-lg-4 col-md-6 mb-30')
+  price: number
 }
 
-const BService: React.FC<ServiceProps> = ({
-  image,
-  name,
-  socialLinks,
-  columnClasses,
-}) => {
+const BService: React.FC<ServiceProps> = ({ slug, image, name, price }) => {
   return (
-    <div className={columnClasses}>
+    <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
       <div className="services__team-item">
         <div className="services__team-item-image">
-          <img src={image} alt={name} />
-          <div className="services__team-item-image-content">
-            <h5>{name}</h5>
-            <span>- - - - -</span>
-            <div className="services__team-item-image-content-social">
+          <Image src={image} alt={name} width={820} height={900} />
+
+          <Link href={`/services/${slug}`}>
+            <div className="services__team-item-image-content">
+              <Link href={`/services/${slug}`}>
+                <h5>{name}</h5>
+              </Link>
+              <span>{price}</span>
+              {/* <div className="services__team-item-image-content-social">
               <ul>
                 {socialLinks.map((link, index) => (
                   <li key={index}>
-                    <a href={link}>
+                    <Link href={link}>
                       <i className="fab fa-facebook-f"></i>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
+            </div> */}
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
