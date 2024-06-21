@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Tags from '@/components/blog/Tags/page'
 import RecentPosts from '@/components/blog/RecentPosts/page'
@@ -9,10 +10,20 @@ import postsData from '@/data/postsData'
 
 const Posts: React.FC = () => {
   const tags = ['Booking Now', 'Luxury', 'Single room', 'Small suite']
+  const postsPerPage = 3 // Quantidade de posts por página
+  const [currentPage, setCurrentPage] = useState(1)
+
+  // Calcular índices de início e fim dos posts da página atual
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = postsData.slice(indexOfFirstPost, indexOfLastPost)
+
+  // Função para mudar de página
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber)
 
   return (
     <>
-      {/* <!-- Page Banner Start --> */}
+      {/* Seção de Banner */}
       <div
         className="page__banner"
         data-background="/assets/img/banner/page-banner-9.jpg"
@@ -37,58 +48,62 @@ const Posts: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* <!-- Page Banner End --> */}
-      {/* <!-- Blog Standard Start --> */}
+
+      {/* Seção de Posts */}
       <div className="blog__standard section-padding">
         <div className="container">
           <div className="row">
             <div className="col-xxl-9 col-xl-8 col-lg-8 lg-mb-30">
               <div className="blog__standard-left">
-                {/* {postsData.slice(0, 3).map((post, index) => (
-                  <BPostItem key={index} {...post} />
-                ))} */}
-                {postsData.length > 0 ? (
-                  postsData
-                    .slice(0, 3)
-                    .map((post, index) => <BPostItem key={index} {...post} />)
+                {/* Lista de Posts */}
+                {currentPosts.length > 0 ? (
+                  currentPosts.map((post, index) => (
+                    <BPostItem key={index} {...post} />
+                  ))
                 ) : (
                   <p>Nenhum post encontrado.</p>
                 )}
-              </div>
-              <div className="theme__pagination mt-50">
-                <ul>
-                  <li>
-                    <a className="active" href="#">
-                      01
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">02</a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="far fa-ellipsis-h"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">05</a>
-                  </li>
-                </ul>
+
+                {/* Paginação */}
+                <div className="theme__pagination mt-50">
+                  <ul>
+                    {/* Links de páginas */}
+                    {postsData.length > 0 &&
+                      Math.ceil(postsData.length / postsPerPage) > 1 &&
+                      Array.from(
+                        { length: Math.ceil(postsData.length / postsPerPage) },
+                        (_, i) => i + 1
+                      ).map((pageNumber) => (
+                        <li key={pageNumber}>
+                          <Link
+                            href={`/posts?page=${pageNumber}`}
+                            passHref
+                            className={`${
+                              pageNumber === currentPage ? 'active' : ''
+                            }`}
+                            onClick={() => paginate(pageNumber)}
+                          >
+                            {pageNumber}
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
               </div>
             </div>
+
+            {/* Sidebar */}
             <div className="col-xxl-3 col-xl-4 col-lg-4">
               <PostSearch placeholder="Search....." />
               <div className="all__sidebar">
                 <Category />
                 <RecentPosts posts={postsData} />
-
                 <Tags tags={tags} />
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- Blog Standard End --> */}
     </>
   )
 }
