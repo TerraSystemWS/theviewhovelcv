@@ -7,6 +7,7 @@ import { logoSrc, menuItems } from '@/data/headerData'
 // const inter = Inter({ subsets: ["latin"] });
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
   title: 'The View Hotel',
@@ -57,6 +58,7 @@ export default function RootLayout({
       </head>
 
       <body>
+        <Toaster position="bottom-right" reverseOrder={true} />
         {/* <!-- Preloader start --> */}
         {/* <div className="theme-loader">
           <div className="spinner">
