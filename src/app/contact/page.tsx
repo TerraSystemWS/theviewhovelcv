@@ -1,9 +1,10 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { sendEmail, Inputs } from '@/utils/mail'
+import toast from 'react-hot-toast'
 
 // type Inputs = {
 //   name: string
@@ -14,6 +15,8 @@ import { sendEmail, Inputs } from '@/utils/mail'
 // }
 
 const ContactArea: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false)
+
   const {
     register,
     handleSubmit,
@@ -23,12 +26,15 @@ const ContactArea: React.FC = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     // aqui sera inserido a logica para enviar email
+
     try {
       // Await the email sending process
       await sendEmail(data)
 
       // Provide user feedback on success
-      alert('Email sent successfully!')
+      // alert('Email sent successfully!')
+      setIsLoading(true)
+      toast.success('Email sent successfully!')
     } catch (error) {
       // Handle errors and provide user feedback
       // console.error('Error sending email:', error.message)
@@ -36,12 +42,16 @@ const ContactArea: React.FC = () => {
       // Handle errors and provide user feedback
       if (error instanceof Error) {
         // Safely access error.message
-        console.error('Error sending email:', error.message)
-        alert('Failed to send email. Please try again later.')
+        // console.error('Error sending email:', error.message)
+        // alert('Failed to send email. Please try again later.')
+        toast.error('Failed to send email. Please try again later.')
+        setIsLoading(false)
       } else {
         // Handle unexpected error types
-        console.error('Unexpected error:', error)
-        alert('An unexpected error occurred. Please try again later.')
+        // console.error('Unexpected error:', error)
+        // alert('An unexpected error occurred. Please try again later.')
+        toast.error('An unexpected error occurred. Please try again later.')
+        setIsLoading(false)
       }
     }
 
@@ -57,6 +67,7 @@ const ContactArea: React.FC = () => {
   return (
     <>
       {/* <!-- Page Banner Start --> */}
+
       <div
         className="page__banner"
         data-background="/assets/img/banner/page-banner-9.jpg"
@@ -224,13 +235,13 @@ const ContactArea: React.FC = () => {
                     </div>
                     <div className="col-lg-12">
                       <div className="contact__area-form-item">
-                        {/* <input
+                        <button
                           className="theme-btn"
                           type="submit"
-                          style={{ backgroundColor: 'red' }}
-                        /> */}
-                        <button className="theme-btn" type="submit">
-                          Submit Now<i className="fal fa-long-arrow-right"></i>
+                          disabled={isLoading}
+                        >
+                          {isLoading ? 'successfully!' : 'Submit Now'}
+                          <i className="fal fa-long-arrow-right"></i>
                         </button>
                       </div>
                     </div>
