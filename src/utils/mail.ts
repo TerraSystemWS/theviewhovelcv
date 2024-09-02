@@ -29,8 +29,8 @@ export const sendEmail = async (dto: Inputs) => {
   try {
     // Send the email
     const info = await transport.sendMail({
-      from: email, // Include sender's name and email address
-      to: process.env.MAIL_USER, // Recipient address
+      from: process.env.MAIL_USER, // Include sender's name and email address
+      to: email, // Recipient address
       subject: `${name} - ${subject}`, // Add subject
       html: `
       <p>${name}</p>
