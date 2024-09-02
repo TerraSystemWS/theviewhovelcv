@@ -1,7 +1,39 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { useForm, SubmitHandler } from 'react-hook-form'
+import { sendEmail, Inputs } from '@/utils/mail'
+
+// type Inputs = {
+//   name: string
+//   email: string
+//   phone: number
+//   subject: string
+//   message: string
+// }
 
 const ContactArea: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>()
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    // aqui sera inserido a logica para enviar email
+    sendEmail(data)
+    //.then(data => setDefaultResultOrder(data)).catch(error => setResult(error)).finally(()=> setLoading(false))
+
+    // Example usage to send an email
+  }
+
+  // console.log(watch('name')) // watch input value by passing the name of it
+  // console.log(watch('email'))
+  // console.log(watch('phone'))
+  // console.log(watch('subject'))
+  // console.log(watch('message'))
+
   return (
     <>
       {/* <!-- Page Banner Start --> */}
@@ -84,7 +116,10 @@ const ContactArea: React.FC = () => {
               <div className="contact__area-social">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a
+                      href="https://www.facebook.com/TheViewEntertainmentCenter?mibextid=LQQJ4d"
+                      target="_blank"
+                    >
                       <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
@@ -109,17 +144,18 @@ const ContactArea: React.FC = () => {
             <div className="col-xl-7 col-lg-7">
               <div className="contact__area-form">
                 <h3 className="mb-35">Send Massage</h3>
-                <form id="contact-form" action="" method="POST">
+                <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
                   <div className="row">
                     <div className="col-sm-6 mb-30">
                       <div className="contact__area-form-item">
                         <i className="fal fa-user"></i>
                         <input
                           type="text"
-                          name="name"
                           placeholder="Full Name"
-                          required
+                          // required
+                          {...register('name', { required: true })}
                         />
+                        {errors.name && <span>This field is required</span>}
                       </div>
                     </div>
                     <div className="col-sm-6 sm-mb-30">
@@ -127,10 +163,11 @@ const ContactArea: React.FC = () => {
                         <i className="far fa-envelope-open"></i>
                         <input
                           type="email"
-                          name="email"
                           placeholder="Email Address"
-                          required
+                          // required
+                          {...register('email', { required: true })}
                         />
+                        {errors.email && <span>This field is required</span>}
                       </div>
                     </div>
                     <div className="col-sm-6 mb-30">
@@ -138,9 +175,9 @@ const ContactArea: React.FC = () => {
                         <i className="far fa-phone-alt"></i>
                         <input
                           type="text"
-                          name="phone"
                           placeholder="Phone"
-                          required
+                          // required
+                          {...register('phone')}
                         />
                       </div>
                     </div>
@@ -149,23 +186,29 @@ const ContactArea: React.FC = () => {
                         <i className="far fa-address-book"></i>
                         <input
                           type="text"
-                          name="subject"
                           placeholder="Subject"
-                          required
+                          {...register('subject', { required: true })}
                         />
+                        {errors.subject && <span>This field is required</span>}
                       </div>
                     </div>
                     <div className="col-sm-12 mb-30">
                       <div className="contact__area-form-item">
                         <i className="far fa-comments"></i>
                         <textarea
-                          name="message"
                           placeholder="Type your comments...."
+                          {...register('message', { required: true })}
                         ></textarea>
+                        {errors.message && <span>This field is required</span>}
                       </div>
                     </div>
                     <div className="col-lg-12">
                       <div className="contact__area-form-item">
+                        {/* <input
+                          className="theme-btn"
+                          type="submit"
+                          style={{ backgroundColor: 'red' }}
+                        /> */}
                         <button className="theme-btn" type="submit">
                           Submit Now<i className="fal fa-long-arrow-right"></i>
                         </button>
