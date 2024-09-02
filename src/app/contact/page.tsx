@@ -17,13 +17,33 @@ const ContactArea: React.FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,
     formState: { errors },
   } = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     // aqui sera inserido a logica para enviar email
-    sendEmail(data)
-    //.then(data => setDefaultResultOrder(data)).catch(error => setResult(error)).finally(()=> setLoading(false))
+    try {
+      // Await the email sending process
+      await sendEmail(data)
+
+      // Provide user feedback on success
+      alert('Email sent successfully!')
+    } catch (error) {
+      // Handle errors and provide user feedback
+      // console.error('Error sending email:', error.message)
+      // alert('Failed to send email. Please try again later.')
+      // Handle errors and provide user feedback
+      if (error instanceof Error) {
+        // Safely access error.message
+        console.error('Error sending email:', error.message)
+        alert('Failed to send email. Please try again later.')
+      } else {
+        // Handle unexpected error types
+        console.error('Unexpected error:', error)
+        alert('An unexpected error occurred. Please try again later.')
+      }
+    }
 
     // Example usage to send an email
   }
