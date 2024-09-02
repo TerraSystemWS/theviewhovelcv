@@ -41,10 +41,10 @@ export const sendEmail = async (dto: Inputs) => {
       text: message, // Plain text version of the message
     })
 
-    console.log('Email sent:', info.response)
+    // console.log('Email sent:', info.response)
     return info
   } catch (error) {
-    console.error('Error sending email:', error)
+    // console.error('Error sending email:', error)
     throw error
   }
 }
