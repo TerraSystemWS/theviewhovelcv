@@ -25,14 +25,8 @@ export default function RootLayout({
         {/* <!-- Start Meta --> */}
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="description"
-          content="Hostily - Luxury Hotel Booking HTML5 Template"
-        />
-        <meta
-          name="keywords"
-          content="Creative, Digital, multipage, landing, freelancer template"
-        />
+        <meta name="description" content="The View - Luxury Hotel" />
+        <meta name="keywords" content="hotel, fogo, cabo verde, booking" />
         <meta name="author" content="ThemeOri" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <!-- Title of Site --> */}
