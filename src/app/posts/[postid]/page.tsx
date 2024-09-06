@@ -92,7 +92,7 @@ export default function Page({ params }: any) {
                     </li>
                   </ul>
                 </div>
-                <h3 className="mb-20">{filteredpostsData[0].title || ' '}</h3>
+                <h3 className="mb-20">{filteredpostsData[0]?.title || ' '}</h3>
                 <p className="mb-25">
                   {filteredpostsData[0]?.description || ' '}
                 </p>
