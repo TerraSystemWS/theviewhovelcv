@@ -76,13 +76,13 @@ export default function Page({ params }: any) {
                     <li>
                       <a href="#">
                         <i className="fal fa-user"></i>By -{' '}
-                        {filteredpostsData[0].author || ' '}
+                        {filteredpostsData[0]?.author || ' '}
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <i className="fal fa-calendar-alt"></i>
-                        {filteredpostsData[0].date || ' '}
+                        {filteredpostsData[0]?.date || ' '}
                       </a>
                     </li>
                     <li>
@@ -94,7 +94,7 @@ export default function Page({ params }: any) {
                 </div>
                 <h3 className="mb-20">{filteredpostsData[0].title || ' '}</h3>
                 <p className="mb-25">
-                  {filteredpostsData[0].description || ' '}
+                  {filteredpostsData[0]?.description || ' '}
                 </p>
                 {/* <p>
                   Nulla at eleifend lorem. Praesent et ex sed metus egestas
