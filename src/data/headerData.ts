@@ -1,6 +1,6 @@
 // headerData.ts
 
-export const logoSrc = 'assets/img/logo.png'
+export const logoSrc = '/assets/img/logo.png'
 
 export interface MenuItem {
   title: string
